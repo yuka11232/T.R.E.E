@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T.R.E.E Group — Technology Recycling Eco Energy</title>
+<link rel="icon" href="assets/Images/Logo/TreeLogo.jpeg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#home" class="brand">
+      <img src="assets/Images/Logo/TreeLogo.jpeg" alt="T.R.E.E Group logo" class="brand-logo">
+      <span class="brand-text">
+        <span class="brand-name">T.R.E.E Group</span>
+        <span class="brand-sub">Technology Recycling Eco Energy</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#products">Products</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <!-- TODO: replace with the team working photo, e.g. background-image: url('assets/Images/Hero/hero.jpg'); -->
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">T.R.E.E Group</p>
+    <h1 class="hero-slogan">Where Roots Grow, People Glow.</h1>
+  </div>
+</section>
+
+<section id="about" class="section about-section">
+  <div class="container">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-text">
+      <p>T.R.E.E. Group is an engineering and technology startup developing sustainable, autonomous solutions for agriculture, rural communities, and the environment.</p>
+      <p>We combine mechanical engineering, electronics, sensor technologies, autonomous energy, data science, AI, and software to turn real-world challenges into practical solutions.</p>
+      <p>Our goal is to create reliable technologies that can operate in areas with limited infrastructure and contribute to a more sustainable and connected future.</p>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="section products-section">
+  <div class="container">
+    <h2 class="section-title">Products</h2>
+    <p class="section-intro">T.R.E.E Group builds battery-free, energy-autonomous hardware that turns ambient kinetic energy — wind, rain, vibration — into reliable, low-power monitoring and action for agriculture and public spaces.</p>
+
+    <article class="product-card">
+      <div class="product-head">
+        <h3>Torpaq Loop</h3>
+        <span class="product-tag">Smart Fertilizer Feedback Loop</span>
+      </div>
+      <div class="product-body">
+        <div class="product-text">
+          <p>Torpaq Loop is a standalone, battery-free hardware node that brings precision fertilization to fields with zero external power. It runs entirely on kinetic energy harvested from wind, rainfall, and crop-stem vibration through a piezoelectric mechanism, allowing it to operate indefinitely in areas without grid access.</p>
+          <p>A piezo generator feeds a dedicated energy-harvesting chip (LTC3588) that stores micro-charges in a supercapacitor. Once enough energy has built up, the system briefly wakes from deep sleep, reads a soil moisture or acidity sensor, and — only if the soil actually needs it — releases a precise micro-dose of fertilizer through an ultra-low-power actuator, such as a bistable solenoid valve, gravity doser, or piezo micro-pump. The system then returns to sleep and the cycle repeats.</p>
+          <p>Because every stage is designed around microamp-level consumption, Torpaq Loop needs no batteries, no wiring, and no maintenance visits — just the energy already present in the field. The first working prototype is being built for roughly 40–72 AZN in components, following a frugal-innovation approach that keeps the technology accessible.</p>
+          <ul class="feature-list">
+            <li>Zero external power — runs on wind, rain, and biomass vibration</li>
+            <li>Closed sleep–wake–measure–dose feedback loop</li>
+            <li>Precision micro-dosing, only when the soil needs it</li>
+            <li>Frugal, low-cost, and field-repairable design</li>
+          </ul>
+        </div>
+        <img src="assets/Images/Prototype/P1.jpeg" alt="Torpaq Loop prototype diagram" class="product-image">
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-head">
+        <h3>SenseBridge</h3>
+        <span class="product-tag">Inclusive Communication &amp; Autonomous Energy</span>
+      </div>
+      <div class="product-body">
+        <div class="product-text">
+          <p>SenseBridge is a multi-component, inclusive communication system for public spaces, designed to remove language, visual, and physical barriers in food service and urban infrastructure.</p>
+          <p>It pairs three communication modules — <strong>TouchCode</strong>, tactile marking for visually impaired users; <strong>OrderSymbol</strong>, a visual order-tracking system for deaf visitors, tourists, and non-native speakers; and <strong>LocalLens</strong>, digital language and cultural adaptation of menus and navigation — with a fully autonomous, 3D-printed wind-piezo power module.</p>
+          <p>Instead of a propeller, the module uses a swinging frame of free-hinged shutters that catch wind from any direction. The frame acts as a lever, concentrating force from the whole shutter array onto a single flexible piezo element (LDT0-028K) sealed inside a dry mast, generating the electrical pulses needed to run local sensors, indicators, and low-power lighting — no cables required.</p>
+          <p>The result is weatherproof, easily repairable hardware — 3D-printed PLA/PETG housings with minimal wiring — intended for fast-food chains, street cafés, parks, and smart bus stops, making public spaces more accessible while keeping every sensor energy-independent.</p>
+          <ul class="feature-list">
+            <li>Inclusive by design — for visual, hearing, and language barriers</li>
+            <li>Wind-powered, cable-free operation</li>
+            <li>Weatherproof and UV-sealed enclosure</li>
+            <li>Simple to repair and 3D-print</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="team" class="section team-section">
+  <div class="container">
+    <h2 class="section-title">Team</h2>
+    <div class="team-grid">
+
+      <article class="team-card">
+        <img src="assets/Images/Team/Image1.jpeg" alt="Youssef El Haroun" class="team-photo">
+        <h3>Youssef El Haroun</h3>
+        <p class="team-role">Human-Centred Systems Engineer &amp; Product Co-Lead</p>
+        <p class="team-bio">Translates the realities of farmers, rural communities, and field environments into practical engineering requirements. Youssef contributes to the system's physical design, sensor integration, prototyping, and product strategy, ensuring that Torpaq Loop remains technically functional, accessible, and grounded in the needs of its intended users.</p>
+      </article>
+
+      <article class="team-card">
+        <img src="assets/Images/Team/Image2.jpeg" alt="Vahid Musayev" class="team-photo">
+        <h3>Vahid Musayev</h3>
+        <p class="team-role">Founder, Hardware Engineer &amp; Technical Co-Lead</p>
+        <p class="team-bio">Leads the development and testing of Torpaq Loop's physical engineering system. Vahid works on hardware architecture, electronic components, sensor integration, power management, and prototype reliability, helping transform the product concept into a durable, field-ready system.</p>
+      </article>
+
+      <article class="team-card">
+        <img src="assets/Images/Team/Image3.jpeg" alt="Ali Gasimov" class="team-photo">
+        <h3>Ali Gasimov</h3>
+        <p class="team-role">Software Engineer &amp; Digital Platform Lead</p>
+        <p class="team-bio">Builds the software infrastructure connecting Torpaq Loop's hardware, data, and users. Ali leads platform development, system integration, data visualisation, and the technical architecture required to present complex field information through a clear and usable digital interface.</p>
+      </article>
+
+      <article class="team-card">
+        <img src="assets/Images/Team/Image4.jpeg" alt="Mamed Nasibli" class="team-photo">
+        <h3>Mamed Nasibli</h3>
+        <p class="team-role">Business Development &amp; Investment Lead</p>
+        <p class="team-bio">Leads Torpaq Loop's commercial strategy, partnerships, and investor relations. Mamed works on market validation, business modelling, funding opportunities, stakeholder communication, and the development of a pathway through which the product can move from a student-built prototype toward sustainable implementation and growth.</p>
+      </article>
+
+      <article class="team-card">
+        <img src="assets/Images/Team/Image5.jpeg" alt="Ilyas Taghiyev" class="team-photo">
+        <h3>Ilyas Taghiyev</h3>
+        <p class="team-role">Data Science &amp; Agricultural Analytics Lead</p>
+        <p class="team-bio">Develops the analytical layer that converts raw environmental and soil data into understandable insights. Ilyas is responsible for data processing, pattern analysis, performance evaluation, and the development of models that support more informed agricultural decisions.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p><strong>Email:</strong> info@treegroup.com</p>
+        <p><strong>Phone:</strong> +994 00 000 00 00</p>
+        <p><strong>Location:</strong> Baku, Azerbaijan</p>
+        <!-- TODO: replace with real contact details -->
+      </div>
+      <form class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>&copy; 2026 T.R.E.E Group — Technology Recycling Eco Energy. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
