@@ -248,6 +248,7 @@ ul {
   margin-bottom: 18px;
 }
 
+.product-head h2,
 .product-head h3 {
   font-size: 1.5rem;
   color: var(--color-primary);
@@ -302,6 +303,113 @@ ul {
   left: 0;
   color: var(--color-primary-2);
   font-weight: 700;
+}
+
+.learn-more-btn {
+  align-self: flex-start;
+  background: var(--color-primary-2);
+  color: var(--color-white);
+  border: none;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.learn-more-btn:hover {
+  background: var(--color-primary);
+}
+
+/* ---------- Product full-screen detail ---------- */
+
+.fullscreen-panel {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: var(--color-bg);
+  overflow-y: auto;
+}
+
+.fullscreen-panel.open {
+  display: block;
+}
+
+.fullscreen-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 28px 24px 80px;
+}
+
+.fullscreen-inner .product-head {
+  margin-top: 20px;
+}
+
+.fullscreen-image {
+  width: 100%;
+  max-width: 480px;
+  flex: none;
+  margin-bottom: 20px;
+}
+
+.detail-subhead {
+  font-size: 1.15rem;
+  color: var(--color-primary-2);
+  margin-top: 10px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.spec-table th,
+.spec-table td {
+  text-align: left;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+}
+
+.spec-table thead th {
+  background: var(--color-bg-alt);
+  color: var(--color-primary);
+}
+
+.spec-table-total {
+  font-weight: 700;
+  background: var(--color-accent-light);
+}
+
+.back-btn {
+  background: var(--color-bg-alt);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background: var(--color-accent-light);
+}
+
+#fertilizerBackBtnBottom {
+  margin-top: 28px;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 /* ---------- Team ---------- */

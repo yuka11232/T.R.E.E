@@ -13,3 +13,25 @@ siteNav.querySelectorAll("a").forEach((link) => {
     navToggle.setAttribute("aria-expanded", "false");
   });
 });
+
+// SmartFertilizer full-screen detail view — instant show/hide, no animation.
+const fertilizerLearnMoreBtn = document.getElementById("fertilizerLearnMoreBtn");
+const fertilizerFullScreen = document.getElementById("fertilizerFullScreen");
+const fertilizerBackBtn = document.getElementById("fertilizerBackBtn");
+const fertilizerBackBtnBottom = document.getElementById("fertilizerBackBtnBottom");
+
+function openFertilizerFullScreen() {
+  fertilizerFullScreen.classList.add("open");
+  fertilizerFullScreen.scrollTop = 0;
+  document.body.classList.add("no-scroll");
+}
+
+function closeFertilizerFullScreen() {
+  fertilizerFullScreen.classList.remove("open");
+  document.body.classList.remove("no-scroll");
+  document.getElementById("products").scrollIntoView();
+}
+
+fertilizerLearnMoreBtn.addEventListener("click", openFertilizerFullScreen);
+fertilizerBackBtn.addEventListener("click", closeFertilizerFullScreen);
+fertilizerBackBtnBottom.addEventListener("click", closeFertilizerFullScreen);
