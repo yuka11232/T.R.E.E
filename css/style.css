@@ -518,6 +518,145 @@ body.no-scroll {
   background: var(--color-primary);
 }
 
+/* ---------- Hero subline ---------- */
+
+.hero-subline {
+  margin-top: 18px;
+  font-size: 1.05rem;
+  color: var(--color-accent-light);
+}
+
+/* ---------- SmartFertilizer detail: flow diagrams, quotes, callouts, phases ---------- */
+
+.flow-diagram {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 14px 18px;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.92rem;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.flow-diagram-cycle {
+  color: var(--color-primary-2);
+  font-weight: 700;
+}
+
+.flow-arrow {
+  color: var(--color-accent);
+  margin: 0 4px;
+}
+
+.pull-quote {
+  border-left: 3px solid var(--color-accent-light);
+  padding: 4px 20px;
+  color: var(--color-primary);
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+.pull-quote-lead {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.callout-box {
+  background: var(--color-bg-alt);
+  border: 1px dashed var(--color-border);
+  border-radius: 6px;
+  padding: 14px 18px;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.tag-line {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.phase-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.phase-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.phase-num {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-primary-2);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phase-body {
+  color: var(--color-text-muted);
+  padding-top: 3px;
+}
+
+.phase-body strong {
+  color: var(--color-text);
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.todo-list li {
+  padding-left: 26px;
+  position: relative;
+  color: var(--color-text-muted);
+}
+
+.todo-list li::before {
+  content: "○";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+/* ---------- Closing section ---------- */
+
+.closing-section {
+  background: var(--color-dark);
+  text-align: center;
+}
+
+.closing-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.closing-quote {
+  border-left: none;
+  color: var(--color-accent-light);
+  font-size: 1.3rem;
+  font-style: italic;
+  max-width: 640px;
+}
+
+.closing-tagline {
+  color: var(--color-white);
+  font-size: 1rem;
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {

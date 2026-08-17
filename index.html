@@ -47,8 +47,12 @@
       <!-- TODO: replace with the team working photo, e.g. background-image: url('assets/Images/Hero/hero.jpg'); -->
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <p class="hero-eyebrow">T.R.E.E Group</p>
+        <p class="hero-eyebrow">T.R.E.E Group · Technology · Recycling · Eco · Energy</p>
         <h1 class="hero-slogan">Where Roots Grow, People Glow.</h1>
+        <p class="hero-subline">
+          Off-grid soil sensing, built for the places decisions are actually
+          made.
+        </p>
       </div>
     </section>
 
@@ -57,19 +61,20 @@
         <h2 class="section-title">About Us</h2>
         <div class="about-text">
           <p>
-            T.R.E.E. Group is an engineering and technology startup developing
-            sustainable, autonomous solutions for agriculture, rural
-            communities, and the environment.
+            T.R.E.E. Group is a student-founded engineering team developing
+            autonomous, low-cost hardware for agriculture in areas with
+            limited infrastructure.
           </p>
           <p>
-            We combine mechanical engineering, electronics, sensor technologies,
-            autonomous energy, data science, AI, and software to turn real-world
-            challenges into practical solutions.
+            We work across mechanical design, electronics, sensor integration,
+            energy systems and software. Our approach is to build small, test
+            in real conditions, and let each stage of the system be justified
+            by the results of the one before it.
           </p>
           <p>
-            Our goal is to create reliable technologies that can operate in
-            areas with limited infrastructure and contribute to a more
-            sustainable and connected future.
+            Our current focus is SmartFertilizer: a solar-powered soil
+            monitoring node designed to run without wiring, mains power, or
+            routine maintenance.
           </p>
         </div>
       </div>
@@ -79,24 +84,25 @@
       <div class="container">
         <h2 class="section-title">Products</h2>
         <p class="section-intro">
-          T.R.E.E Group builds battery-free, energy-autonomous hardware that
-          turns ambient kinetic energy — wind, rain, vibration — into reliable,
-          low-power monitoring and action for agriculture, even in areas with
-          limited infrastructure.
+          T.R.E.E Group builds energy-autonomous hardware for agricultural
+          monitoring. Our systems harvest their own power, operate on a duty
+          cycle rather than continuously, and are designed to be deployed in
+          numbers across a field rather than as a single instrument near a
+          building.
         </p>
 
         <article class="product-card">
           <div class="product-head">
             <h3>SmartFertilizer</h3>
-            <span class="product-tag">Smart Fertilizer Feedback Loop</span>
+            <span class="product-tag">Soil intelligence, where decisions are made</span>
           </div>
           <div class="product-body">
             <div class="product-text">
               <p>
-                SmartFertilizer is a standalone, battery-free hardware node that
-                brings precision fertilization to fields with zero external
-                power — running entirely on wind, rain, and crop vibration
-                through a piezoelectric energy-harvesting system.
+                A solar-powered, off-grid sensing node that measures soil
+                conditions in the field and flags when those conditions fall
+                outside a set threshold — helping determine whether irrigation
+                and fertilization are appropriate before they happen.
               </p>
               <button
                 type="button"
@@ -131,7 +137,7 @@
         </button>
         <div class="product-head">
           <h2 id="fertilizerFullScreenTitle">SmartFertilizer</h2>
-          <span class="product-tag">Smart Fertilizer Feedback Loop</span>
+          <span class="product-tag">Soil intelligence, where decisions are made</span>
         </div>
         <img
           src="assets/Images/Prototype/P1.jpeg"
@@ -139,87 +145,247 @@
           class="product-image fullscreen-image"
         />
         <div class="product-text">
+          <h3 class="detail-subhead">What SmartFertilizer Is</h3>
           <p>
-            SmartFertilizer is a fully autonomous soil enrichment system
-            engineered to deliver continuous land conditioning without manual
-            intervention or external power connections. By combining a
-            3D-printed physical structure, an integrated refillable fertilizer
-            container, and a self-sustaining micro-energy harvester, it solves
-            the challenge of maintaining active soil saturation in remote or
-            off-grid environments.
+            A farmer cannot see underground. Moisture, and eventually nutrient
+            conditions, vary across a single field — but decisions about
+            irrigation and fertilization are usually made for the whole field
+            at once, based on surface appearance, schedule, or experience.
+          </p>
+          <p>
+            SmartFertilizer is a low-cost, self-powered node that takes that
+            measurement where the crop actually is. It reads soil moisture,
+            evaluates the reading against a configurable threshold, and runs
+            entirely on energy it harvests itself.
+          </p>
+          <p>
+            We are not building a new soil sensor. We are building a
+            different way of deploying soil sensing: cheap enough to install
+            in numbers, independent enough to install without wiring, and
+            designed around a decision rather than a dashboard.
           </p>
 
-          <h3 class="detail-subhead">Kinetic Micro-Energy Harvesting</h3>
-          <p>
-            To guarantee zero-maintenance power for onboard sensors and release
-            mechanisms, SmartFertilizer uses a two-part environmental energy
-            converter, both feeding a single flexible piezoelectric strip
-            (LDT0-028K) sealed safely inside a dry mast:
-          </p>
+          <h3 class="detail-subhead">What We Have Built</h3>
+          <p>The current prototype is a working, tested unit:</p>
           <ul class="feature-list">
             <li>
-              <strong>Wind flutter &amp; summating lever</strong> — a vertical
-              frame of free-pivoting louvers captures wind currents; as pressure
-              forces the louvers against the frame, the whole assembly acts as a
-              class-1 lever, concentrating the cumulative force into a single
-              flexural bend of the piezo strip.
+              <strong>ESP32-based control unit</strong> — handles sensing,
+              threshold evaluation and power state management
             </li>
             <li>
-              <strong>Rain-impact cantilever</strong> — a rain-collection dish
-              absorbs the kinetic energy of falling raindrops and sends the
-              impact along a cantilever arm to the same piezo element,
-              generating extra voltage spikes during precipitation.
+              <strong>Capacitive soil-moisture sensing</strong> — chosen over
+              resistive probes for corrosion resistance and longer field life
+            </li>
+            <li>
+              <strong>Solar energy harvesting</strong> — the primary power
+              source
+            </li>
+            <li>
+              <strong>Rechargeable energy storage</strong> — carries the node
+              through night and low-light periods
+            </li>
+            <li>
+              <strong>Power conversion and management</strong> — regulated
+              supply to the sensing and control stages
+            </li>
+            <li>
+              <strong>Threshold and decision logic</strong> — the reading is
+              evaluated, not just recorded
+            </li>
+            <li>
+              <strong>Modular architecture</strong> — additional sensors can
+              be added without redesigning the core unit
+            </li>
+            <li>
+              <strong>Field readings</strong> — taken from real soil samples,
+              not simulated
             </li>
           </ul>
+
+          <h3 class="detail-subhead">How the Energy Path Works</h3>
+          <p class="flow-diagram">
+            sunlight <span class="flow-arrow">&rarr;</span> energy management
+            <span class="flow-arrow">&rarr;</span> storage
+            <span class="flow-arrow">&rarr;</span> sensing
+            <span class="flow-arrow">&rarr;</span> measurement
+            <span class="flow-arrow">&rarr;</span> sleep
+          </p>
           <p>
-            A dedicated energy-harvesting chip (LTC3588) stores these
-            micro-charges in a supercapacitor. Once enough energy has built up,
-            the system briefly wakes from deep sleep, reads a soil moisture or
-            acidity sensor, and — only if the soil actually needs it — releases
-            a precise micro-dose of fertilizer through an ultra-low-power
-            actuator, such as a bistable solenoid valve, gravity doser, or piezo
-            micro-pump. The system then returns to sleep and the cycle repeats.
+            The node does not need to run continuously. Soil moisture does not
+            change on the timescale of seconds, so continuous operation would
+            spend energy for no additional information.
+          </p>
+          <p>Instead the system operates on a duty cycle:</p>
+          <p class="flow-diagram flow-diagram-cycle">
+            wake <span class="flow-arrow">&rarr;</span> measure
+            <span class="flow-arrow">&rarr;</span> evaluate
+            <span class="flow-arrow">&rarr;</span> sleep
+          </p>
+          <p>
+            This is the difference between attaching a solar panel to a
+            device and designing around an energy budget. The measurement
+            interval, not the panel size, is what makes long-term autonomous
+            operation possible.
           </p>
 
           <h3 class="detail-subhead">
-            Refillable Soil Saturation &amp; Fertilizer Module
+            Experimental: Kinetic Energy Harvesting
           </h3>
           <p>
-            A refillable core container houses an optimised nutrient release
-            system that steadily enriches the surrounding soil. Its structure
-            allows quick maintenance cycles while ensuring continuous,
-            controlled nutrient flow directly into the root zone.
+            Alongside the solar system we are testing a secondary,
+            experimental harvesting subsystem using a flexible piezoelectric
+            element driven by wind flutter and rain impact.
           </p>
-
-          <h3 class="detail-subhead">3D-Printed Modular Construction</h3>
           <p>
-            The housing is engineered specifically for FDM/SLA additive
-            manufacturing in weather-resistant materials such as PETG or ABS,
-            with built-in mechanical tolerances (0.3–0.5 mm) for print-in-place
-            joints and hinges — eliminating the need for complex assembly
-            hardware.
+            This is a research direction, not a production feature. Solar is
+            the primary and proven energy source for the current prototype.
+            We are investigating whether kinetic harvesting can meaningfully
+            supplement it during extended low-light periods.
           </p>
 
-          <h3 class="detail-subhead">Key Advantages</h3>
+          <h3 class="detail-subhead">Why Off-Grid Matters</h3>
+          <p>
+            A single sensor near a farmhouse can be plugged in. The value of
+            soil sensing, though, comes from having many measurement points —
+            ten, twenty, fifty across a farm — because that is the only way
+            to see variation.
+          </p>
+          <p>
+            At that point, running power to every device stops being
+            practical. Cabling cost, trenching, maintenance and failure
+            points scale with the number of nodes.
+          </p>
+          <p>
+            Energy autonomy is therefore not a feature of SmartFertilizer. It
+            is the precondition for the thing SmartFertilizer is trying to
+            become.
+          </p>
+
+          <h3 class="detail-subhead">The Experiment</h3>
+          <p>
+            The question we set out to answer was not "does the sensor
+            produce a number."
+          </p>
+          <p class="pull-quote pull-quote-lead">
+            Can SmartFertilizer distinguish meaningfully different soil
+            conditions?
+          </p>
+          <p>
+            We prepared three soil samples — dry, intermediate, and recently
+            irrigated — and took repeated readings from each.
+          </p>
+          <blockquote class="pull-quote">
+            The point is not that the sensor produces a number. The point is
+            whether that number can change a decision.
+          </blockquote>
+          <p class="callout-box">
+            Results pending — this section will be populated with measured
+            readings once testing is complete. We do not populate it with
+            estimated values.
+          </p>
+
+          <h3 class="detail-subhead">What We Are Building Toward</h3>
+          <p>Each stage depends on the results of the one before it.</p>
+          <ol class="phase-list">
+            <li class="phase-item">
+              <span class="phase-num">1</span>
+              <span class="phase-body">
+                <strong>Measure</strong> — Soil moisture and environmental
+                conditions at a single node.
+              </span>
+            </li>
+            <li class="phase-item">
+              <span class="phase-num">2</span>
+              <span class="phase-body">
+                <strong>Understand</strong> — Extended sensing: soil
+                electrical conductivity, pH, temperature, improved moisture
+                accuracy — and eventually nutrient sensing, where technically
+                validated. Combined with crop-specific thresholds.
+              </span>
+            </li>
+            <li class="phase-item">
+              <span class="phase-num">3</span>
+              <span class="phase-body">
+                <strong>Map</strong> — Multiple nodes across one field,
+                identifying unusually dry or wet regions.
+              </span>
+            </li>
+            <li class="phase-item">
+              <span class="phase-num">4</span>
+              <span class="phase-body">
+                <strong>Assist</strong> — Indicating where irrigation or
+                fertilization attention is most needed.
+              </span>
+            </li>
+            <li class="phase-item">
+              <span class="phase-num">5</span>
+              <span class="phase-body">
+                <strong>Integrate</strong> — Possible connection to existing
+                irrigation and fertigation infrastructure.
+              </span>
+            </li>
+          </ol>
+
+          <h3 class="detail-subhead">A Note on the Name</h3>
+          <p>
+            SmartFertilizer describes where this system is going, and the
+            decision it is built to support.
+          </p>
+          <p class="callout-box">
+            To be precise about the current stage: the prototype does not
+            dispense fertilizer, and does not measure nutrient content. It
+            helps determine whether soil conditions are appropriate before
+            irrigation and fertilization decisions are made. Nutrient sensing
+            and any dosing capability belong to later phases, and only where
+            we can validate them.
+          </p>
+
+          <h3 class="detail-subhead">Intended Impact</h3>
           <ul class="feature-list">
+            <li>Less unnecessary irrigation &rarr; lower water demand</li>
             <li>
-              100% off-grid autonomy — no external wiring or battery
-              replacements
+              Better-timed fertilization &rarr; reduced risk of unnecessary
+              input use
             </li>
             <li>
-              Mechanical summation turns weak, scattered wind and rain impacts
-              into concentrated, high-peak-voltage pulses
+              Locally harvested power &rarr; deployment without grid
+              infrastructure
             </li>
             <li>
-              Weatherproof and durable — electronics fully encapsulated inside
-              the dry central housing, protected from UV and moisture
+              More spatial information &rarr; intervention where it is
+              actually needed
             </li>
-            <li>
-              Scalable across fields, greenhouses, and urban agricultural setups
-            </li>
-            <li>Precision micro-dosing, only when the soil needs it</li>
-            <li>Frugal, low-cost, and field-repairable design</li>
           </ul>
+
+          <h3 class="detail-subhead">What We Still Need to Validate</h3>
+          <ul class="todo-list">
+            <li>Water saved per growing cycle</li>
+            <li>Energy autonomy across seasons and weather conditions</li>
+            <li>Sensor reliability and drift over time</li>
+            <li>Number of nodes required per unit area</li>
+            <li>
+              The relationship between our readings and real agronomic
+              decisions
+            </li>
+          </ul>
+          <p>
+            We publish this list deliberately. The difference between a
+            hypothesis and a result is the whole substance of the project.
+          </p>
+
+          <h3 class="detail-subhead">What Makes This Different</h3>
+          <p>
+            Not a new soil sensor. A different way of deploying soil
+            intelligence.
+          </p>
+          <p class="tag-line">
+            Low-cost · off-grid · modular · field-oriented · built and tested
+            locally · designed around decisions rather than dashboards.
+          </p>
+          <blockquote class="pull-quote">
+            We don't want farmers to receive more data. We want them to face
+            fewer uncertain decisions.
+          </blockquote>
         </div>
         <button type="button" class="back-btn" id="fertilizerBackBtnBottom">
           &larr; Back to main page
@@ -281,11 +447,10 @@
               Software Engineer &amp; Digital Platform Lead
             </p>
             <p class="team-bio">
-              Builds the software infrastructure connecting SmartFertilizer's
-              hardware, data, and users. Ali leads platform development, system
-              integration, data visualisation, and the technical architecture
-              required to present complex field information through a clear and
-              usable digital interface.
+              Builds the software layer connecting SmartFertilizer's hardware
+              to its users, including firmware integration, data handling,
+              and the platform through which field readings will be
+              reviewed.
             </p>
           </article>
 
@@ -318,11 +483,10 @@
               Data Science &amp; Agricultural Analytics Lead
             </p>
             <p class="team-bio">
-              Develops the analytical layer that converts raw environmental and
-              soil data into understandable insights. Ilyas is responsible for
-              data processing, pattern analysis, performance evaluation, and the
-              development of models that support more informed agricultural
-              decisions.
+              Responsible for processing and evaluating the readings the
+              prototype produces, assessing sensor consistency, and
+              developing the analytical layer that will turn multi-node data
+              into usable insight.
             </p>
           </article>
         </div>
@@ -362,6 +526,19 @@
             <button type="submit">Send Message</button>
           </form>
         </div>
+      </div>
+    </section>
+
+    <section class="section closing-section">
+      <div class="container closing-inner">
+        <blockquote class="pull-quote closing-quote">
+          A farmer cannot see underground.<br />
+          But the field doesn't have to remain invisible.
+        </blockquote>
+        <p class="closing-tagline">
+          <strong>SMARTFERTILIZER</strong> — Soil intelligence, where
+          decisions are made.
+        </p>
       </div>
     </section>
 
