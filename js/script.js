@@ -1,3 +1,7 @@
+// Enable optional enhancements only after this script has loaded successfully.
+// The page remains fully visible and usable if JavaScript is unavailable.
+document.documentElement.classList.add("js-enabled");
+
 const reduceMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
